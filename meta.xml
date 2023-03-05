@@ -1,0 +1,13 @@
+<meta>
+     <info author="zeth" type="script" name="zeth3dtext" description="3d text task" />
+     <script src="script_c.lua" type="client" />
+     <script src="script_s.lua" type="server" />
+
+     <export function="createTextObject" type="server"/>
+     <export function="findAllTextObjects" type="server"/>
+     <export function="findTextObject" type="server"/>
+     <export function="updateTextObject" type="server"/>
+     <export function="deleteTextObject" type="server"/>
+</meta>
+          
+
