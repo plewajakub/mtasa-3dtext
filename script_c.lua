@@ -2,18 +2,18 @@ setDevelopmentMode (true)
 
 local textObjects = {}
 
--- Event handler for when a player enters a text object's collision sphere
+-- wejscie do colsphere
 function onTextObjectEnter(txtObj)
-    table.insert(textObjects, txtObj) -- add the text object to the list of visible text objects
+    table.insert(textObjects, txtObj) -- dodanie tekstu do 'widocznych'
 end
 addEvent("onTextObjectEnter", true)
 addEventHandler("onTextObjectEnter", resourceRoot, onTextObjectEnter)
 
--- Event handler for when a player exits a text object's collision sphere
+-- wyjscie z colsphere
 function onTextObjectLeave(txtObj)
     for i, obj in ipairs(textObjects) do
         if obj.id == txtObj.id then
-            table.remove(textObjects, i) -- remove the text object from the list of visible text objects
+            table.remove(textObjects, i) -- usuniecie tekstu z 'widocznych'
             break
         end
     end
